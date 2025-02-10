@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --text-color: #091417;
+  --background-color: #f3f9fb;
+  --primary-color: #4fa7c1;
+  --secondary-color: #92cbdb;
+  --accent-color: #66b8d0;
+
+  --dark-text-color: #e9f4f6;
+  --dark-background-color: #040a0b;
+  --dark-primary-color: #3e97b1;
+  --dark-secondary-color: #245c6b;
+  --dark-accent-color: #2f8098;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100dvh;
+}

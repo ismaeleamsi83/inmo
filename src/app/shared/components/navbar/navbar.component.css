@@ -1,0 +1,36 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 60px;
+  padding: 0 8px;
+  gap: 16px;
+}
+
+.div-search{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgb(184, 184, 184);
+  flex-grow: 1;
+  max-width: 600px;
+  input{
+    border: none;
+    flex-grow: 1;
+  }
+  input:focus{
+    border: none;
+    outline: none;
+  }
+}
+
+.div-logo{
+  height: 30px;
+  img{
+    height: 100%;
+  }
+}
