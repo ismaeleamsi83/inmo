@@ -1,1 +1,13 @@
-<p>sidebar works!</p>
+<nav>
+  <mat-nav-list>
+    @for (item of menu; track $index) {
+    <a mat-list-item [routerLink]="item.value">
+      <div style="display: flex; align-content:flex-end; background-color: aliceblue; gap: 8px">
+        <mat-icon class="nav-icon">{{ item.icon }}</mat-icon>
+        <span>{{ item.name }}</span>
+      </div>
+    </a>
+    }
+  </mat-nav-list>
+</nav>
+

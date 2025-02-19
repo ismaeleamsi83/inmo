@@ -1,0 +1,13 @@
+nav{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 8px;
+  width: max-content;
+}
+.nav-icon{
+  font-size: 22px;
+}
+span{
+  font-size: 16px;
+}
