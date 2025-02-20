@@ -1,13 +1,15 @@
 <nav>
-  <mat-nav-list>
-    @for (item of menu; track $index) {
-    <a mat-list-item [routerLink]="item.value">
-      <div style="display: flex; align-content:flex-end; background-color: aliceblue; gap: 8px">
-        <mat-icon class="nav-icon">{{ item.icon }}</mat-icon>
-        <span>{{ item.name }}</span>
-      </div>
-    </a>
-    }
-  </mat-nav-list>
+  <div style="display: flex; justify-content:flex-end; margin-bottom: 16px;" (click)="showMenu = !showMenu">
+    <svg style="cursor: pointer;" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+      height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7" />
+    </svg>
+  </div>
+  @for (item of menu; track $index) {
+  <div class="content-menu">
+    <div [innerHTML]="item.icon" class="icon-menu"></div>
+    
+    <span [class.collapse]="!showMenu">{{ item.name }}</span>
+  </div>
+  }
 </nav>
-

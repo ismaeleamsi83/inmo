@@ -1,13 +1,30 @@
 nav{
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 16px 8px;
+  gap: 4px;
   width: max-content;
+  min-height: calc(100dvh - 61px);
+  box-sizing: border-box;
+  padding: 16px;
+  font-weight: 600;
 }
-.nav-icon{
-  font-size: 22px;
+
+.content-menu{
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: width 1s ease;
 }
-span{
-  font-size: 16px;
+
+.content-menu:hover{
+  background-color: var(--accent-color);
+  cursor: pointer;
+  color: var(--background-color);
+}
+
+.collapse{
+  display: none;
 }

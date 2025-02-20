@@ -3,3 +3,8 @@ header{
   background-color: var(--secondary-color);
   vertical-align: middle;
 }
+aside{
+  max-height: calc(100dvh - 61px);
+  background-color: var(--secondary-color);
+  width: max-content;
+}
