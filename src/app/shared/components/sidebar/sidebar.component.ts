@@ -17,19 +17,19 @@ import { CommonModule, NgClass } from '@angular/common';
 })
 export class SidebarComponent implements OnInit {
 
-  menu: { name: string; value: string; icon: SafeHtml }[];
+  menu: { name: string; link: string; icon: SafeHtml }[];
 
   showMenu = true;
 
   constructor(private sanitizer: DomSanitizer) {
     this.menu = [
-      { name: "Inicio", value: "/", icon: this.sanitizeSvg(Icons.home) },
-      { name: "Clientes", value: "/Customers", icon: this.sanitizeSvg(Icons.people) },
-      { name: "Citas y Visitas", value: "/Appointments", icon: this.sanitizeSvg(Icons.event) },
-      { name: "Reportes", value: "/Reports", icon: this.sanitizeSvg(Icons.bar_chart) },
-      { name: "Comunicaciones", value: "/Communications", icon: this.sanitizeSvg(Icons.chat) },
-      { name: "Configuración", value: "/Configuration", icon: this.sanitizeSvg(Icons.settings) },
-      { name: "Cerrar Sesión", value: "/SignOut", icon: this.sanitizeSvg(Icons.exit_to_app) }
+      { name: "Inicio", link: "/dashboard", icon: this.sanitizeSvg(Icons.home) },
+      { name: "Clientes", link: "/clientes", icon: this.sanitizeSvg(Icons.people) },
+      { name: "Citas y Visitas", link: "/citas-visitas", icon: this.sanitizeSvg(Icons.event) },
+      { name: "Reportes", link: "/Reports", icon: this.sanitizeSvg(Icons.bar_chart) },
+      { name: "Comunicaciones", link: "/Communications", icon: this.sanitizeSvg(Icons.chat) },
+      { name: "Configuración", link: "/Configuration", icon: this.sanitizeSvg(Icons.settings) },
+      { name: "Cerrar Sesión", link: "/SignOut", icon: this.sanitizeSvg(Icons.exit_to_app) }
     ];
   }
 

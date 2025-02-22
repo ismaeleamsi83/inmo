@@ -7,7 +7,7 @@
     </svg>
   </div>
   @for (item of menu; track $index) {
-    <div class="content-menu">
+    <div class="content-menu" [routerLink]="item.link">
       <div [innerHTML]="item.icon" class="icon-menu"></div>
       <span class="menu-text">{{ item.name }}</span>
     </div>

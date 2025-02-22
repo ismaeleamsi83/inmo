@@ -2,7 +2,12 @@
   <app-navbar>
   </app-navbar>
 </header>
-<aside>
-  <app-sidebar>
-  </app-sidebar>
-</aside>
+<div style="display: flex;">
+  <aside>
+    <app-sidebar>
+    </app-sidebar>
+  </aside>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
