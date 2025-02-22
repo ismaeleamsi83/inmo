@@ -1,30 +1,68 @@
-nav{
+nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: max-content;
+  width: 80px; 
   min-height: calc(100dvh - 61px);
   box-sizing: border-box;
   padding: 16px;
   font-weight: 600;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.content-menu{
+nav:not(.collapsed) {
+  width: 220px; 
+}
+
+.content-menu {
   display: flex;
-  vertical-align: middle;
   align-items: center;
-  gap: 8px;
+  gap: 8px; 
   padding: 4px 8px;
   border-radius: 4px;
-  transition: width 1s ease;
+  transition: background-color 0.2s ease-in-out, padding 0.3s ease-in-out, gap 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .content-menu:hover{
-  background-color: var(--accent-color);
-  cursor: pointer;
+  background-color: var(--primary-color);
   color: var(--background-color);
+  cursor: pointer;
 }
 
-.collapse{
-  display: none;
+nav.collapsed .content-menu {
+  padding: 4px; 
+  gap: 0; 
+  justify-content: center; 
+}
+
+nav.collapsed .menu-text {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+
+
+nav:not(.collapsed) .menu-text {
+  width: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+
+.select-menu{
+  display: flex; 
+  justify-content:flex-end; 
+  margin-bottom: 16px;
+  svg:hover{
+    cursor: pointer;
+  }
+}
+
+nav.collapsed .select-menu svg{
+  transform: rotate(180deg);
 }
